@@ -23,6 +23,7 @@ class App extends StatelessWidget {
 }
 
 class Main extends StatefulWidget {
+  void initState() {}
 
   @override
   _MainState createState() => _MainState();
@@ -37,27 +38,17 @@ class _MainState extends State<Main> {
     return Scaffold(
       body: _pages[_currentIndex],
       bottomNavigationBar: BottomNavigationBar(
-        currentIndex: _currentIndex,
-        onTap: (int index) {
-          setState(() {
-            _currentIndex = index;
-          });
-        },
-        items: <BottomNavigationBarItem> [
-          BottomNavigationBarItem(
-            icon: Container(),
-            title: Text("Tank")
-          ),
-          BottomNavigationBarItem(
-            icon: Container(),
-            title: Text("Damage")
-          ),
-          BottomNavigationBarItem(
-            icon: Container(),
-            title: Text("Support")
-          )
-        ]
-      ),
+          currentIndex: _currentIndex,
+          onTap: (int index) {
+            setState(() {
+              _currentIndex = index;
+            });
+          },
+          items: <BottomNavigationBarItem>[
+            BottomNavigationBarItem(icon: Container(), title: Text("Tank")),
+            BottomNavigationBarItem(icon: Container(), title: Text("Damage")),
+            BottomNavigationBarItem(icon: Container(), title: Text("Support"))
+          ]),
     );
   }
 }
