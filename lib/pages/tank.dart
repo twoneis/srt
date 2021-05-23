@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:srt/elements/list.dart';
 import 'package:srt/pages/add.dart';
 
 class Tank extends StatefulWidget {
@@ -13,6 +14,9 @@ class _TankState extends State<Tank> {
       appBar: AppBar(
         title: Text("Tank"),
         centerTitle: true,
+      ),
+      body: GameList(
+        role: "tank",
       ),
       floatingActionButton: FloatingActionButton(
         child: Icon(Icons.add),
